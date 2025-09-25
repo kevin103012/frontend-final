@@ -1,0 +1,74 @@
+.info-container {
+  width:80%;
+  height:250px;
+  background:transparent;
+  margin:auto;
+  display:flex;
+  flex-Direction:row;
+  flex-Basis:250px;
+  color:#000000 ;
+  font-Family:sans-serif ;
+  font-Weight:bold;
+  letter-Spacing:1px;
+  gap:0;
+  align-Items:center;
+  justify-Content:space-around
+}
+.info-container img {
+    margin-top: 30px;
+    width: 90px;
+}
+
+.m-progreso-container {
+  text-align: center;
+  font-size: 14px;
+  border-radius: 15px;
+  font-weight: 700;
+  margin: 0 5%;
+  
+}
+
+.m-progreso-container h2 {
+    font-size: 22px;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.progreso-card {
+    height: 220px;
+    width: 220px;
+    border-radius: 48%;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.progreso-card p {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.modelosCompletados {
+  background-color: #c2e9ff;
+  
+  border: 5px solid #87b8f9;
+  font-family: sans-serif;
+}
+.rachaAprendizaje {
+  background-color: #ffc2c2;
+  
+  border: 5px solid #d6a1a1;
+  font-family: sans-serif;
+}
+
+
+.tiempoEstudioSemanal {
+  background-color: #b2cfa6;
+  
+  border: 5px solid #7ed957;
+  font-family: sans-serif;
+}
+

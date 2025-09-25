@@ -1,0 +1,70 @@
+
+ .m-logros-container {
+   text-align: center;
+   font-size: 16px;
+   padding: 20px;
+   border-radius: 15px;
+   font-weight: 700;
+   box-shadow: 0px 0px 2px 0px rgba(224,0,0,1);
+    margin: 50px 5% 100px 5%;
+}
+ 
+
+.logros-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 240px;
+    margin-top: 50px;
+    
+ 
+}
+
+img {
+    width: 90px;
+    
+}
+
+.logro-card {
+  padding: 30px 20px;
+  width: 370px;
+  min-height: fit-content;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.h2-categoria {
+  font-size: 28px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.p-aviso {
+  font-size: 16px;
+  margin: 0;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.logro-card.bloqueado {
+  background: #2f2f2f;
+  color: #aaa;
+  filter: grayscale(100%);
+  box-shadow: 0 0 10px #111;
+}
+
+.logro-card.desbloqueado {
+  background: #FFC29D;
+  color: #000;
+  border: 2px solid #FF751F;
+  filter: none;
+  box-shadow: 0 0 9px #FF751F;
+}
+
+.logro-card .estado {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+}

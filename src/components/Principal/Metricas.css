@@ -1,0 +1,43 @@
+.metricas-container{
+    background: transparent;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 56px;
+}
+
+.metrica-card {
+    height: 180px;
+    width: 22%;
+    border-radius: 30px;
+    text-align: center;
+    display: flex;
+    font-family: sans-serif;
+    font-size: 18px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: #e6c1c1;
+    margin: 10px;
+    box-shadow: 0px 0px 2px 1px rgba(237,0,0,1);
+-webkit-box-shadow: 0px 0px 2px 1px rgba(237,0,0,1);
+-moz-box-shadow: 0px 0px 2px 1px rgba(237,0,0,1);
+}
+
+.metrica-card p {
+    text-align: center;
+    font-size: 20px;
+    margin-top:1px;
+    letter-spacing: 1px;
+}
+
+.p-categoria {
+    margin-top: 30px !important;
+}
+
+.p-progreso {
+    color: #621505;
+    font-size: 22px !important;
+}
