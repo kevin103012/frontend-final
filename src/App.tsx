@@ -2,7 +2,7 @@ import React from 'react';
 
 import './App.css';
 import Principal from './pages/Principal';
-
+import Abecedario from './pages/Abecedario';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Principal />} />
-        {/* <Route path="/abecedario" element={<Abecedario />} /> */}
+        <Route path="/Abecedario" element={<Abecedario />} />
         {/* <Route path="/palabras" element={<Palabras />} /> */}
         {/* <Route path="/matematicas" element={<Matematicas />} /> */}
         {/* <Route path="/entrenar" element={<Entrenar />} /> */}

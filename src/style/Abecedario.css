@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.abecedario-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  
+  background: #ddcccc;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+/* Panel de cámara */
+.panel {
+  background: #9b1717;
+ border: solid 5px #6e1908;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:start ;
+  width: 1100px;
+  height: 750px;
+  gap: 0;
+}
+
+/* 
+    seccion de video
+    */
+.panel-content {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 500px;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.video-container {
+    position: relative;
+    height: 420px;
+    width: 640px;
+    background-color: #000;
+    border: 5px solid transparent;
+    border-radius: 10px;
+    margin:30px 0 0 30px;
+}
+
+
+.hand-canvas {
+    position: absolute;
+  background: #000;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.video-container video {
+    z-index: 1;
+}
+/* BOTONES GAA */
+
+
+.botones {
+    background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  height: 400px;
+  margin:30px 40px 0 0;
+  width: 300px;
+  
+}
+
+.btn {
+  padding:25px 5px;
+  font-size: 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  font-weight: 800;
+  border: none;
+  transition: all 0.1s ease-in-out;
+}
+
+.btn.activar {
+  background: #d1edc5;
+  color: #387d1b;
+  
+}
+.btn.activar:hover {
+  transform: scale(1.04);
+}
+
+.btn.detener {
+  background: #f6b8b8;
+  color: #861313;
+}
+.btn.detener:hover {
+  transform: scale(1.04);
+}
+
+.btn.progreso {
+  background: #92b4e1;
+  color: #06418f;
+}
+.btn.progreso:hover {
+  transform: scale(1.04);
+}
+
+
+
+.instrucciones-container {
+    background-color: #dfa9a9;
+    width: 75%;
+    height: 240px;
+    margin: 5px auto 20px auto;
+    padding: 0;
+    font-family: "Poppins";
+    border-radius: 25px;
+    color: #541306;
+    
+}
+
+.instrucciones-container h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.indicaciones {
+    width: 90%;
+    margin: auto;
+    font-size: 20px;
+    font-family: "Poppins";
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+    resultado
+*/
+.result-hand-container {
+    background-color: #9b1717;
+    border: 5px solid #6e1908;
+    border-radius: 20px;
+    width: 500px;
+    height: 600px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    padding: 10px;
+}
+
+.resultado {
+    width: 90%;
+    height: 50%;
+    margin: auto;
+    background-color: #b8c6b1;
+    text-align: center;
+    color: #1c420c ;
+    font-family: "Poppins";
+    border-radius: 20px;
+    padding: 0;
+}
+
+.resultado h2 {
+  font-size: 33px;
+  color: #1c420c ;
+  font-weight: 700;
+  margin: 10px 0 0 0 ;
+  
+}
+
+.p-ld {
+    font-family: "Poppins" !important;
+    font-size: 120px !important;
+    color: #1c420c !important;
+    font-weight: 700 !important;
+    margin: 0; 
+    padding: 0;
+}
+
+
+.p-precision {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 0;
+
+}
+
+
+.hand-predictions {
+    height: 95%;
+  font-size: 30px;
+  color: #000000;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hand-prediction {
+  margin-bottom: 30px;
+    font-family: sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 1.2rem;
+  width: 600px;
+  max-width: 95%;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+}
+
+.div-progreso-modal {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.letra {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.gris {
+  background: #e5e7eb;
+  color: #6b7280;
+}
+
+.dorada {
+  background: linear-gradient(145deg, #fbbf24, #f59e0b);
+  color: #fff;
+  box-shadow: 0 0 8px rgba(251, 191, 36, 0.6);
+  transform: scale(1.05);
+}
+
+
+.btn.cerrar {
+  background: #64748b;
+  color: #fff;
+  padding: 0.7rem 2rem;
+}
+.btn.cerrar:hover {
+  background: #475569;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+
+
+/*
+  historial
+*/
+
+.historial-container {
+  background-color: white !important;
+  width: 90%; margin: auto;
+  height: 220px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around ;
+  align-items: center;
+  padding: 0;
+}
+
+
+.historial-list {
+  background-color: #64748b !important;
+  width: 100%;
+  height: 65%;
+  border-radius: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.div-btn-limpiar {
+  display: flex;
+  
+  background-color: #387d1b !important;
+  height: 29%;
+  width: 100%;
+  border-radius: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
+}
+
+.limpiar-historial {
+  background-color: red;
+  height: 50px !important;
+  width: 170px !important;
+  margin: 0 auto;
+  font-size: 20px;
+  border-radius: 10px;
+  text-align: center !important;
+  padding: 0;
+}
+
+.limpiar-historial p {
+  text-align: center;
+  margin: 0;
+}
